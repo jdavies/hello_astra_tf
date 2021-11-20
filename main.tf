@@ -16,7 +16,7 @@ output "organization_id" {
 }
 
 output "database_id" {
-  value = astra_database.insurance_db.id
+  value = astra_database.hello_astra_db.id
   description = "Test Description"
 }
 
@@ -36,37 +36,37 @@ output "client_id" {
 }
 
 output "cqlsh_url" {
-  value = astra_database.insurance_db.cqlsh_url
+  value = astra_database.hello_astra_db.cqlsh_url
   description = "CQL Shell URL"
 }
 
 output "graphql_url" {
-  value = astra_database.insurance_db.graphql_url
+  value = astra_database.hello_astra_db.graphql_url
   description = "GraphQL URL"
 }
 
 output "data_endpoint_url" {
-  value = astra_database.insurance_db.data_endpoint_url
+  value = astra_database.hello_astra_db.data_endpoint_url
   description = "Data Endpoint URL (REST API)"
 }
 
 output "grafana_url" {
-  value = astra_database.insurance_db.grafana_url
+  value = astra_database.hello_astra_db.grafana_url
   description = "Grafana URL"
 }
 
 ### These commands are not displayed after the "apply"
 output "replication_factor" {
-  value = astra_database.insurance_db.replication_factor
+  value = astra_database.hello_astra_db.replication_factor
   description = "Replicaion Factor"
 }
 
 output "node_count" {
-  value = astra_database.insurance_db.node_count
+  value = astra_database.hello_astra_db.node_count
   description = "Node Count"
 }
 
 output "total_storage" {
-  value = astra_database.insurance_db.total_storage
+  value = astra_database.hello_astra_db.total_storage
   description = "Total Storage (GB?)"
 }

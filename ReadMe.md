@@ -14,7 +14,7 @@ export KEYSPACE=callcenter
 export ASTRA_DB_REGION=us-west1
 export ASTRA_CLIENT_ID=<Your Astra Client ID>
 export ASTRA_CLIENT_SECRET=<Your Astra Client Secret>
-export ASTRA_ORGANIZATION=<Your Astra Ogranization ID>
+export ASTRA_ORGANIZATION=<Your Astra Organization ID>
 ```
 
 - Make your setenv.sh file executable:
@@ -25,7 +25,7 @@ chmod 700 setenv.sh
 
 ## Running the code
 
-Execute the folowing commands in the folder that contains your setenv.sh file:
+Execute the following commands in the folder that contains your setenv.sh file:
 
 ```sh
 source setenv.sh
@@ -37,10 +37,10 @@ terraform apply helloastra
 To delete everything
 
 ```sh
-terraform destroy -var="token=$ASTRA_API_TOKEN"
+terraform destroy -var="token=$ASTRA_API_TOKEN" -var="organization_id=$ASTRA_ORGANIZATION_ID"
 ```
 
 ## Custom Roles
 
-Custom roles (as shown in the resource.tf file) are based on an array of string valuess in the ```policy``` field. You can find a list of possible values for these strings [here](https://docs.datastax.com/en/astra/docs/user-permissions.html).
+Custom roles (as shown in the resources.tf file) are based on an array of string values in the ```policy``` field. You can find a list of possible values for these strings [here](https://docs.datastax.com/en/astra/docs/user-permissions.html).
 

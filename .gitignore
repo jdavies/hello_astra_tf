@@ -34,3 +34,4 @@ helloastra
 
 # Ignore our setenv.sh file so we don't upload our keyes to github
 setenv.sh
+.DS_Store

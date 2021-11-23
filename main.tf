@@ -21,17 +21,7 @@ output "database_id" {
 }
 
 output "token" {
-  value = astra_token.api_token.token
-  description = "Token information - DO NOT LOSE"
-}
-
-output "client_secret" {
-  value = astra_token.api_token.secret
-  description = "Token information - DO NOT LOSE"
-}
-
-output "client_id" {
-  value = astra_token.api_token.client_id
+  value = var.token
   description = "Token information - DO NOT LOSE"
 }
 

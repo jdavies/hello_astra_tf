@@ -28,6 +28,9 @@ override.tf.json
 #
 # !example_override.tf
 
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
+# Ignore the plan output of command: terraform plan -out=helloastra
+# helloastra:
+helloastra
+
+# Ignore our setenv.sh file so we don't upload our keyes to github
 setenv.sh

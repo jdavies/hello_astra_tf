@@ -2,13 +2,21 @@ locals {
   keyspace = "helloastra"
 }
 
-# Create the database
+# Create the database on AWS
 resource "astra_database" "hello_astra_db" {
-  name           = "hello_astra"
+  name           = "hello_astra_tf"
   keyspace       = local.keyspace
-  cloud_provider = "gcp"
-  region         = "us-west1"
+  cloud_provider = "aws"
+  region         = "us-west-2"
 }
+
+# Create the database on Google Cloud Platform.
+# resource "astra_database" "hello_astra_db" {
+#   name           = "hello_astra_tf"
+#   keyspace       = local.keyspace
+#   cloud_provider = "gcp"
+#   region         = "us-west1"
+# }
 
 
 resource "astra_role" "hello_admin" {

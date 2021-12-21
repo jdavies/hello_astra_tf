@@ -60,3 +60,19 @@ output "total_storage" {
   value = astra_database.hello_astra_db.total_storage
   description = "Total Storage (GB?)"
 }
+
+output "hello_admin_api_token" {
+  value = astra_token.api_token.token
+  description = "Generated API token for the hello_admin role"
+}
+
+
+output "hello_admin_client_id" {
+  value = astra_token.api_token.client_id
+  description = "Client ID (aka username) for the hello_admin role"
+}
+
+output "hello_admin_client_secret" {
+  value = astra_token.api_token.secret
+  description = "Secret (aka user password) for the hello_admin role"
+}

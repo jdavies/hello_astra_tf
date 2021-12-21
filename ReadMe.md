@@ -3,6 +3,13 @@
 The purpose of this project is to show how to use Terraform to create an
 Astra database.
 
+- [Astra-Terraform Demo](#astra-terraform-demo)
+  - [Prerequisites](#prerequisites)
+  - [Running the code](#running-the-code)
+  - [To view the results](#to-view-the-results)
+  - [To delete everything](#to-delete-everything)
+  - [Custom Roles](#custom-roles)
+
 ## Prerequisites
 
 - Create a token with Admin User rights
@@ -34,7 +41,15 @@ terraform plan -var="token=$ASTRA_API_TOKEN" -var="organization_id=$ASTRA_ORGANI
 terraform apply helloastra
 ```
 
-To delete everything
+## To view the results
+
+You can view the results of the Terraform code and all generated values with this command:
+
+```sh
+terraform output
+```
+
+## To delete everything
 
 ```sh
 terraform destroy -var="token=$ASTRA_API_TOKEN" -var="organization_id=$ASTRA_ORGANIZATION_ID"

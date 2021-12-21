@@ -62,3 +62,8 @@ resource "astra_role" "hello_admin" {
     "db-table-modify", "db-table-select",  
     ]
 }
+
+# Create a security token for our hello_admin role
+resource "astra_token" "api_token" {
+roles = [astra_role.hello_admin.role_id]
+}
